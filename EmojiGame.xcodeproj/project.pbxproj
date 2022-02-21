@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		A44CED3B27C3B82500A67C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED3A27C3B82500A67C97 /* AppDelegate.swift */; };
-		A44CED3D27C3B82500A67C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED3C27C3B82500A67C97 /* SceneDelegate.swift */; };
-		A44CED3F27C3B82500A67C97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED3E27C3B82500A67C97 /* ViewController.swift */; };
-		A44CED4227C3B82500A67C97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44CED4027C3B82500A67C97 /* Main.storyboard */; };
 		A44CED4427C3B82500A67C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44CED4327C3B82500A67C97 /* Assets.xcassets */; };
 		A44CED4727C3B82500A67C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44CED4527C3B82500A67C97 /* LaunchScreen.storyboard */; };
+		A44CED4F27C3B88D00A67C97 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED4E27C3B88D00A67C97 /* MainViewController.swift */; };
+		A44CED5327C3B92800A67C97 /* AllHeroesStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED5227C3B92800A67C97 /* AllHeroesStatistics.swift */; };
+		A44CED5527C3B95500A67C97 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED5427C3B95500A67C97 /* Hero.swift */; };
+		A44CED5727C3B96E00A67C97 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED5627C3B96E00A67C97 /* Protocols.swift */; };
+		A44CED5927C3BAF800A67C97 /* HeroStatisticsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED5827C3BAF800A67C97 /* HeroStatisticsStruct.swift */; };
+		A44CED5B27C3BB9000A67C97 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CED5A27C3BB9000A67C97 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A44CED3727C3B82500A67C97 /* EmojiGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44CED3A27C3B82500A67C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A44CED3C27C3B82500A67C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A44CED3E27C3B82500A67C97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A44CED4127C3B82500A67C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A44CED4327C3B82500A67C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44CED4627C3B82500A67C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44CED4827C3B82500A67C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A44CED4E27C3B88D00A67C97 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A44CED5227C3B92800A67C97 /* AllHeroesStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHeroesStatistics.swift; sourceTree = "<group>"; };
+		A44CED5427C3B95500A67C97 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		A44CED5627C3B96E00A67C97 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		A44CED5827C3BAF800A67C97 /* HeroStatisticsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroStatisticsStruct.swift; sourceTree = "<group>"; };
+		A44CED5A27C3BB9000A67C97 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				A44CED3A27C3B82500A67C97 /* AppDelegate.swift */,
-				A44CED3C27C3B82500A67C97 /* SceneDelegate.swift */,
-				A44CED3E27C3B82500A67C97 /* ViewController.swift */,
-				A44CED4027C3B82500A67C97 /* Main.storyboard */,
+				A44CED4E27C3B88D00A67C97 /* MainViewController.swift */,
+				A44CED5227C3B92800A67C97 /* AllHeroesStatistics.swift */,
+				A44CED5427C3B95500A67C97 /* Hero.swift */,
+				A44CED5627C3B96E00A67C97 /* Protocols.swift */,
+				A44CED5A27C3BB9000A67C97 /* Enums.swift */,
+				A44CED5827C3BAF800A67C97 /* HeroStatisticsStruct.swift */,
 				A44CED4327C3B82500A67C97 /* Assets.xcassets */,
 				A44CED4527C3B82500A67C97 /* LaunchScreen.storyboard */,
 				A44CED4827C3B82500A67C97 /* Info.plist */,
@@ -127,7 +136,6 @@
 			files = (
 				A44CED4727C3B82500A67C97 /* LaunchScreen.storyboard in Resources */,
 				A44CED4427C3B82500A67C97 /* Assets.xcassets in Resources */,
-				A44CED4227C3B82500A67C97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +146,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44CED3F27C3B82500A67C97 /* ViewController.swift in Sources */,
+				A44CED5727C3B96E00A67C97 /* Protocols.swift in Sources */,
+				A44CED5327C3B92800A67C97 /* AllHeroesStatistics.swift in Sources */,
+				A44CED4F27C3B88D00A67C97 /* MainViewController.swift in Sources */,
 				A44CED3B27C3B82500A67C97 /* AppDelegate.swift in Sources */,
-				A44CED3D27C3B82500A67C97 /* SceneDelegate.swift in Sources */,
+				A44CED5B27C3BB9000A67C97 /* Enums.swift in Sources */,
+				A44CED5527C3B95500A67C97 /* Hero.swift in Sources */,
+				A44CED5927C3BAF800A67C97 /* HeroStatisticsStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A44CED4027C3B82500A67C97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A44CED4127C3B82500A67C97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A44CED4527C3B82500A67C97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +298,6 @@
 				INFOPLIST_FILE = EmojiGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +325,6 @@
 				INFOPLIST_FILE = EmojiGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
