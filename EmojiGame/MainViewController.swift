@@ -90,14 +90,15 @@ extension MainViewController {
     }
     
     @objc func restartButtonTapped(sender: UIButton) {
-        guard let allianceSoldier = allianceSoldier else {return}
-        guard let orcsSoldier = orcsSoldier else {return}
-        allianceSoldier.removeFromSuperview()
-        orcsSoldier.removeFromSuperview()
-        pickingHeroes()
+        
+        heroToZero()
         style()
         layout()
         comparisonHeroesAbilities()
+
+        
+        
+        
     }
     
     private func pickingHeroes() {
@@ -129,5 +130,34 @@ extension MainViewController {
         allianceSoldier.intelligence > orcsSoldier.intelligence ? (comparisonInteligenceText = allianceSoldier.name) : (comparisonInteligenceText = orcsSoldier.name)
         
         comparisonLable.text = "Сила атаки выше у \(comparisonAttackPowerText)\nЛовкость выше у \(comparisonAgilityText)\nИнтеллект выше у \(comparisonInteligenceText)"
+    }
+    
+    private func heroToZero() {
+        guard let allianceSoldier = allianceSoldier else {return}
+        guard let orcsSoldier = orcsSoldier else {return}
+
+        allianceSoldier.removeFromSuperview()
+        orcsSoldier.removeFromSuperview()
+        addingHeroesToMassive()
+        pickingHeroes()
+        allianceSoldier.health = 1.0
+        allianceSoldier.health = 1.0
+        allianceSoldier.healthIndicator.progress = 100
+        allianceSoldier.manaIndicator.progress = 100
+        allianceSoldier.isUserInteractionEnabled = true
+        allianceSoldier.imageView.isHidden = true
+        allianceSoldier.avatar.text = allianceSoldier.avatarPersonage
+        allianceSoldier.ultimateButton.isUserInteractionEnabled = true
+        allianceSoldier.layer.removeAllAnimations()
+        
+        orcsSoldier.health = 1.0
+        orcsSoldier.mana = 1.0
+        orcsSoldier.healthIndicator.progress = 100
+        orcsSoldier.manaIndicator.progress = 100
+        orcsSoldier.isUserInteractionEnabled = true
+        orcsSoldier.imageView.isHidden = true
+        orcsSoldier.avatar.text = allianceSoldier.avatarPersonage
+        orcsSoldier.ultimateButton.isUserInteractionEnabled = true
+        orcsSoldier.layer.removeAllAnimations()
     }
 }
