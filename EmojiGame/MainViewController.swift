@@ -90,15 +90,17 @@ extension MainViewController {
     }
     
     @objc func restartButtonTapped(sender: UIButton) {
-        allHeroes = []
-        heroToZero()
-        style()
-        layout()
-        comparisonHeroesAbilities()
 
+        heroToZero()
+        pickingHeroes()
         
+        guard let allianceSoldier = allianceSoldier else {return}
+        guard let orcsSoldier = orcsSoldier else {return}
+        view.addSubview(allianceSoldier)
+        view.addSubview(orcsSoldier)
         
-        
+        comparisonHeroesAbilities()
+      
     }
     
     private func pickingHeroes() {
@@ -138,8 +140,6 @@ extension MainViewController {
 
         allianceSoldier.removeFromSuperview()
         orcsSoldier.removeFromSuperview()
-        addingHeroesToMassive()
-        pickingHeroes()
         allianceSoldier.health = 1.0
         allianceSoldier.health = 1.0
         allianceSoldier.healthIndicator.progress = 100
@@ -159,5 +159,11 @@ extension MainViewController {
         orcsSoldier.avatar.text = orcsSoldier.avatarPersonage
         orcsSoldier.ultimateButton.isUserInteractionEnabled = true
         orcsSoldier.layer.removeAllAnimations()
+        
+        allianceSoldier.removeFromSuperview()
+        orcsSoldier.removeFromSuperview()
+       
+        
+        
     }
 }
