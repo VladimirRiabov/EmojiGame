@@ -90,7 +90,7 @@ extension MainViewController {
     }
     
     @objc func restartButtonTapped(sender: UIButton) {
-        
+        allHeroes = []
         heroToZero()
         style()
         layout()
@@ -156,7 +156,7 @@ extension MainViewController {
         orcsSoldier.manaIndicator.progress = 100
         orcsSoldier.isUserInteractionEnabled = true
         orcsSoldier.imageView.isHidden = true
-        orcsSoldier.avatar.text = allianceSoldier.avatarPersonage
+        orcsSoldier.avatar.text = orcsSoldier.avatarPersonage
         orcsSoldier.ultimateButton.isUserInteractionEnabled = true
         orcsSoldier.layer.removeAllAnimations()
     }
