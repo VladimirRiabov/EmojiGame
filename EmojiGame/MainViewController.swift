@@ -35,6 +35,8 @@ class MainViewController: UIViewController {
     var comparisonAgilityText: String = ""
     var comparisonAttackPowerText: String = ""
     
+    let restartButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackground()
@@ -56,19 +58,26 @@ extension MainViewController {
         comparisonLable.textColor = .white
         comparisonLable.layer.opacity = 0.5
         
+        restartButton.translatesAutoresizingMaskIntoConstraints = false
+        restartButton.configuration = .filled()
+        restartButton.isEnabled = true
+        restartButton.setTitle("Restart", for: [])
+        restartButton.addTarget(self, action: #selector(restartButtonTapped), for: .primaryActionTriggered)
     }
     
     private func layout() {
         guard let allianceSoldier = allianceSoldier else {return}
         guard let orcsSoldier = orcsSoldier else {return}
         view.addSubview(comparisonLable)
+        view.addSubview(restartButton)
         view.addSubview(allianceSoldier)
         view.addSubview(orcsSoldier)
         
         comparisonLable.frame = CGRect(x: 0, y: 0, width: 300, height: 200)
+        restartButton.frame = CGRect(x: 10, y: 140, width: 100, height: 50)
     }
     
-    func assignbackground(){
+    private func assignbackground(){
         let background = UIImage(named: "background")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
@@ -78,6 +87,17 @@ extension MainViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
+    }
+    
+    @objc func restartButtonTapped(sender: UIButton) {
+        guard let allianceSoldier = allianceSoldier else {return}
+        guard let orcsSoldier = orcsSoldier else {return}
+        allianceSoldier.removeFromSuperview()
+        orcsSoldier.removeFromSuperview()
+        pickingHeroes()
+        style()
+        layout()
+        comparisonHeroesAbilities()
     }
     
     private func pickingHeroes() {
@@ -108,6 +128,6 @@ extension MainViewController {
         allianceSoldier.agility > orcsSoldier.agility ? (comparisonAgilityText = allianceSoldier.name) : (comparisonAgilityText = orcsSoldier.name)
         allianceSoldier.intelligence > orcsSoldier.intelligence ? (comparisonInteligenceText = allianceSoldier.name) : (comparisonInteligenceText = orcsSoldier.name)
         
-        comparisonLable.text = "Сила атаки выше у \(comparisonAttackPowerText)\nЛовкость выше у \(comparisonAgilityText)\nИнтелект выше у \(comparisonInteligenceText)"
+        comparisonLable.text = "Сила атаки выше у \(comparisonAttackPowerText)\nЛовкость выше у \(comparisonAgilityText)\nИнтеллект выше у \(comparisonInteligenceText)"
     }
 }
